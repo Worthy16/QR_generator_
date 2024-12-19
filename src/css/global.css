@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+
+/* ===== Colours ===== */
+:root{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+/* changes the color of the selected text */
+p::selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+span::selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+a::selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+.button::selection {
+    color: #fff;
+    background: #451681;
+    text-shadow: 1px 1px 2px #000000;
+}
+.flip-button::selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+input::selection{
+    color: black;
+    background: #D6C0B3;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* For Mozilla Firefox */
+p::-moz-selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+span::-moz-selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+a::-moz-selection {
+    color: #fff;
+    background: #ffbb763f;
+    text-shadow: 1px 1px 2px #000000;
+}
+.button::-moz-selection {
+    color: #fff;
+    background: #451681;
+    text-shadow: 1px 1px 2px #000000;
+}
+input::-moz-selection{
+    color: black;
+    background: #D6C0B3;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+body{
+    overflow-y: hidden;
+    /* height: 100vh; */
+    background-color: var(--body-color);
+}

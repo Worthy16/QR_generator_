@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Gen</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icon.png">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/input.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/infocard.css">
+</head>
+
+<body>
+    <!-- navbar starts -->
+    <nav>
+        <div class="nav-bar">
+            <span class="logo navLogo"><a href="#">BrightQR</a></span>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <section>
+        <div class="card">
+            <div class="card-inner">
+                
+                <div class="card-front" style="display: flex; flex-direction: column;">
+                    <!-- <h1>flip me</h1> -->
+                    <div style="display: flex; flex-direction: row;">
+    
+                        <div class="container">
+                            <div class="box">
+                              <span class="title">Marketing & Branding</span>
+                              <div>
+                                <p>Custom-colored QR codes align with brand colors, making them visually appealing on ads, posters, and product packaging.</p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="box">
+                              <span class="title">Event &nbsp;&nbsp; Promotions</span>
+                              <div>
+                                <p>Branded QR codes on invitations, tickets, and banners attract attention and enhance the event’s visual theme, making scanning more enticing.</p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="box">
+                              <span class="title">Contactless Services</span>
+                              <div>
+                                <p>Colored QR codes on menus and table signs match the decor, blending in seamlessly while linking to digital menus or hotel services.</p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="box">
+                              <span class="title">Product Authentication</span>
+                              <div>
+                                <p>Brands can use color-coded QR codes to verify product authenticity, adding a distinctive look that’s harder to counterfeit.</p>
+                              </div>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    <button class="flip-button" onclick="toggleFlip()">Flip to Generate QR</button>
+                </div>
+
+
+                <div class="card-back">
+                    <button class="flip-button" onclick="toggleFlip()">Flip for Home screen</button>
+                    <!-- <p>Back Side</p> -->
+
+                    <input class="input" type="text" name="text" id="text" placeholder="Enter Text or URL Here" autocomplete="off">
+
+                    <button class="button" type="submit" id="generate">Generate</button>
+                    <div class="picker">
+                        <div class="cls">
+                            <p>Foreground</p>
+                            <input type="color" id="fgcolor" value="#000000" />
+                        </div>
+                        <div class="cls">
+                            <p>Background</p>
+                            <input type="color" id="bgcolor" value="#ffffff" />
+                        </div>
+                    </div>
+
+                    <!-- <div id="qrcode-div">
+                        <div class="qrcode-container">
+                            <img class="qrcode">
+                            <button id="downloadqr" class="download-button">Download</button> 
+                        </div>
+                    </div> -->
+                    <div id="qrcode-div">
+                        <div class="qrcode-container" id="qrcode-container">
+                            <canvas id="qrcode-canvas" width="250" height="250" style="display:none;"></canvas>
+                            <img alt="qr" class="qrcode" style="display:none;">
+                            <button id="downloadqr" class="download-button">Download</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script>
+    function toggleFlip() {
+        const card = document.querySelector('.card');
+        card.classList.toggle('flipped');
+    }
+</script>
+<script src="../js/qr.js"></script>
+
+</html>

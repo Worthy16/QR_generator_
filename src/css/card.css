@@ -1,0 +1,150 @@
+.card {
+    margin-top: 7%;
+    margin-inline: 17%;
+    width: 60%;
+    height: 75vh;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s;
+
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 3px solid #AB886D;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    align-items:first baseline;
+    border: 3px solid #D6C0B3;
+    border-radius: 10px;
+    /* justify-content: center; */
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+
+  /* Button styling */
+.flip-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #AB886D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .flip-button:hover {
+    background-color: #8b6d57;
+  }
+
+
+
+
+  /* input */
+
+
+.picker{
+  position: absolute;
+  display: flex;
+  margin-top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cls {
+    /* margin-inline: 10%; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.cls p {
+    color: rgb(255, 255, 255);
+    margin-top: 14%;
+    /*justify-content: center;
+    align-items: center; */
+    font-size: 16px;
+}
+
+input[type="color"] {
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    outline: none;
+}
+
+#fgcolor::-webkit-color-swatch {
+    border-radius: 100%;
+}
+#bgcolor::-webkit-color-swatch {
+    border-radius: 100%;
+}
+  
+
+#qrcode-div {
+  border-radius: 20px;
+  width: 60%;
+  height: 300px;
+  margin: auto;
+  margin-top: 28%;
+  /* left: 50%; */
+  transform: translateX(33%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrcode-container {
+  position: relative;
+  display: inline-block;
+}
+
+.download-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: none; /* Hide by default. handled the display in qr.js */
+}
